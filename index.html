@@ -52,8 +52,47 @@
         </div>
         <h1 id="resultOfNumberToBiner"></h1>
       </div>
+
+      <!-- Text to Biner -->
+      <div class="border-2 border-red-500 p-3">
+        <h1 class="text-2xl">Text to Biner</h1>
+        <div class="flex gap-2">
+          <input
+            type="text"
+            id="textToBinerInput"
+            class="border-2 border-black py-1 px-2 focus:outline-0 rounded-[5px]"
+          />
+          <button
+            class="border-2 border-black px-2 py-1 rounded-[5px] hover:cursor-pointer hover:bg-blue-500 hover:text-white hover:border-0"
+            id="textToBinerButton"
+          >
+            Convert
+          </button>
+        </div>
+        <h1 id="resultOfTextToBiner"></h1>
+      </div>
+
+      <!-- Biner to Text -->
+      <div class="border-2 border-red-500 p-3">
+        <h1 class="text-2xl">Biner to Text</h1>
+        <div class="flex gap-2">
+          <input
+            type="text"
+            id="binerToTextInput"
+            class="border-2 border-black py-1 px-2 focus:outline-0 rounded-[5px]"
+          />
+          <button
+            class="border-2 border-black px-2 py-1 rounded-[5px] hover:cursor-pointer hover:bg-blue-500 hover:text-white hover:border-0"
+            id="binerToTextButton"
+          >
+            Convert
+          </button>
+        </div>
+        <h1 id="resultOfBinerToText"></h1>
+      </div>
     </div>
 
+    <!-- section 2 -->
     <div
       class="w-full h-screen flex justify-center items-center mt-5 bg-blue-500"
     >
@@ -66,5 +105,28 @@
     </div>
 
     <script src="./script.js"></script>
+
+    <script>
+      const images = [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZpeeXxMWrLC-9J79xwiWdG4NYSjfF8PxwniR_qxVRkQ&s=10",
+        "https://preview.redd.it/kalo-nimpa-dipikir-mas-v0-zm7ne1g4lhhh1.jpeg?width=640&crop=smart&auto=webp&s=20843436217fe3aa1ecb9eb7c8be95567a6f5c83",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdhNm3Q8opOl8_NwPiWHZjbId8nRwUJ2wOcxMTvb9vrQ&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTqv8DWG0wvoxHSIMIoV7AW3nrwYYkwks5CgcwkYFrxA&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyFFitlBcXp2E8ceUgAkYMpW7sBmhd5YiUS8we-wzm3w&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8H4CLdtZAWvBufuCm5zWyu9kx74Y3ogiDekM-HltQrg&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPnFNTbGd4GKMV4P8Z9A0f8qn4tNxottN60Uf41WDh2A&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrpO23P7mRZcYKc8AdVtLc3QwlicQxjUQaczjKBg6R3w&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF89mccu9i2vCk6wzZqa3Ol4AFFGS_r700w8Pgm8ZuBA&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx6JaF3_vToRZiXatDbxmkFjlBLgj_OC68l366cpNJmA&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLkloOHH9JFv2Y9wPXsJslK2L8O_myVP_aKVJq305zxg&s=10",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxV3jxP5S5HkHHUQyMHIbYV8qiNEhtc8htS-VIVVq4Dw&s=10",
+      ];
+
+      const img = document.getElementById("images");
+
+      setInterval(() => {
+        img.src = images[Math.floor(Math.random() * images.length)];
+      }, 3000);
+    </script>
   </body>
 </html>
